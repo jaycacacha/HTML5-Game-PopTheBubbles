@@ -193,6 +193,9 @@ function Animate() {
   HandleBackground();
   handleBubbles();
   handlePlayer();
+
+  _context.fillStyle = "black";
+  _context.fillText("Score: " + score, 10, 40);
   gameFrame++;
   requestAnimationFrame(Animate);
 }
