@@ -248,6 +248,25 @@ function handleEnemy() {
   enemy.update();
 }
 
+function handleGameOver() {
+  _context.save();
+  _context.fillStyle = "white";
+  _context.fillText("GAME OVER", canvas_.width / 3, canvas_.height / 2);
+  _context.fillText(
+    "You reached " + score + " point(s)! ",
+    canvas_.width / 5.2,
+    (3 * canvas_.height) / 4.5
+  );
+  _context.font = "30px Kavivanar";
+  _context.fillText(
+    "Press SPACE to play again",
+    canvas_.width / 3.5,
+    (4.5 * canvas_.height) / 5
+  );
+  gameOver = true;
+  _context.restore();
+}
+
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
   HandleBackground();
