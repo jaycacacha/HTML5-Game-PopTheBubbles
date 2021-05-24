@@ -28,3 +28,6 @@ canvas_.addEventListener("mousedown", function (event) {
 canvas_.addEventListener("mouseup", function (event) {
   mouse.click = false;
 });
+
+const playerLookLeft = new Image();
+playerLookLeft.src = "assets/player/__yellow_cartoon_fish_01_swim.png";
