@@ -188,6 +188,21 @@ function HandleBackground() {
   _context.drawImage(backgroundImg, BG.x2, BG.y, BG.width, BG.height);
 }
 
+class Enemy {
+  constructor() {
+    this.x = canvas_.width + 150;
+    this.y = Math.random() * (canvas_.height - 150) + 90;
+    this.radius = 50;
+    this.speed = Math.random() * 2 + 2;
+    this.frame = 0;
+    this.frameX = 0;
+    this.frameY = 0;
+    this.spriteWidth = 498;
+    this.spriteHeight = 327;
+    this.image = Math.random() <= 0.5 ? "enemy1" : "enemy2";
+  }
+}
+
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
   HandleBackground();
