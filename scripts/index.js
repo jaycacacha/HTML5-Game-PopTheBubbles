@@ -213,6 +213,12 @@ class Enemy {
       this.y = Math.random() * (canvas_.height - 150) + 90;
       this.speed = Math.random() * 2 + 2;
     }
+    const dx = this.x - player.x;
+    const dy = this.y - player.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    if (distance < this.radius + player.radius) {
+      handleGameOver();
+    }
   }
   draw() {
     if (enemy.image == "enemy1") {
