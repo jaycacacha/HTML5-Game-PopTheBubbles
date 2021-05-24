@@ -24,3 +24,7 @@ canvas_.addEventListener("mousedown", function (event) {
   mouse.x = event.x - canvasPosition.left;
   mouse.y = event.y - canvasPosition.top;
 });
+
+canvas_.addEventListener("mouseup", function (event) {
+  mouse.click = false;
+});
