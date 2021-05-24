@@ -169,6 +169,8 @@ function handleBubbles() {
     }
   }
 }
+const backgroundImg = new Image();
+backgroundImg.src = "assets/environment/background.png";
 
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
