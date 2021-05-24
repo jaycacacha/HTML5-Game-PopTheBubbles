@@ -213,6 +213,19 @@ class Enemy {
       this.y = Math.random() * (canvas_.height - 150) + 90;
       this.speed = Math.random() * 2 + 2;
     }
+    if (gameFrame % 5 == 0) {
+      this.frame++;
+      if (this.frame >= 12) this.frame = 0;
+      if (this.frame == 3 || this.frame == 7 || this.frame == 11) {
+        this.frameX = 0;
+      } else {
+        this.frameX++;
+      }
+      if (this.frame < 3) this.frameY = 0;
+      else if (this.frame < 7) this.frameY = 1;
+      else if (this.frame < 11) this.frameY = 2;
+      else this.frameY = 0;
+    }
     const dx = this.x - player.x;
     const dy = this.y - player.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
