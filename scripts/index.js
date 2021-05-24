@@ -12,3 +12,9 @@ let gameOver = false;
 let isPaused = false;
 
 let canvasPosition = canvas_.getBoundingClientRect();
+
+const mouse = {
+  x: canvas_.width / 2,
+  y: canvas_.height / 2,
+  click: false,
+};
