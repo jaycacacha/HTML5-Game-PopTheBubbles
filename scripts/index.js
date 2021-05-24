@@ -148,6 +148,20 @@ function handleBubbles() {
   for (let i = 0; i < bubblesArray.length; i++) {
     bubblesArray[i].update();
     bubblesArray[i].draw();
+    if (bubblesArray[i].y < 0 - bubblesArray[i].radius * 2) {
+      bubblesArray.splice(i, 1);
+      i--;
+    } else if (
+      bubblesArray[i].distance <
+      bubblesArray[i].radius + player.radius
+    ) {
+      if (!bubblesArray[i].counted) {
+        score += 1;
+        bubblesArray[i].counted = true;
+        bubblesArray.splice(i, 1);
+        i--;
+      }
+    }
   }
 }
 
