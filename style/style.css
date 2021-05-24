@@ -9,9 +9,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom, lightblue, #1a75ff, black);
 }
 #_canvas {
   width: 800px;
   height: 500px;
   border: 5px solid black;
+  background: linear-gradient(to bottom, lightblue, blue, black);
 }
