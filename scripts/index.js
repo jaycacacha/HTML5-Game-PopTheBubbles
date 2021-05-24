@@ -242,13 +242,18 @@ class Enemy {
     }
   }
 }
+const enemy = new Enemy();
+function handleEnemy() {
+  enemy.draw();
+  enemy.update();
+}
 
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
   HandleBackground();
   handleBubbles();
   handlePlayer();
-
+  handleEnemy();
   _context.fillStyle = "black";
   _context.fillText("Score: " + score, 10, 40);
   gameFrame++;
