@@ -214,6 +214,33 @@ class Enemy {
       this.speed = Math.random() * 2 + 2;
     }
   }
+  draw() {
+    if (enemy.image == "enemy1") {
+      _context.drawImage(
+        enemy1,
+        this.frameX * this.spriteWidth,
+        this.frameY * this.spriteHeight,
+        this.spriteWidth,
+        this.spriteHeight,
+        this.x - 75,
+        this.y - 60,
+        this.spriteWidth / 3,
+        this.spriteHeight / 3
+      );
+    } else {
+      _context.drawImage(
+        enemy2,
+        this.frameX * this.spriteWidth,
+        this.frameY * this.spriteHeight,
+        this.spriteWidth,
+        this.spriteHeight,
+        this.x - 75,
+        this.y - 60,
+        this.spriteWidth / 3,
+        this.spriteHeight / 3
+      );
+    }
+  }
 }
 
 function Animate() {
