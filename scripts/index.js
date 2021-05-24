@@ -47,6 +47,18 @@ class Player {
     this.spriteWidth = 418;
     this.spriteHeight = 397;
   }
+  update() {
+    const dx = this.x - mouse.x;
+    const dy = this.y - mouse.y;
+    let theta = Math.atan2(dy, dx);
+    this.angle = theta;
+    if (mouse.x != this.x) {
+      this.x -= dx / 20;
+    }
+    if (mouse.y != this.y) {
+      this.y -= dy / 20;
+    }
+  }
   draw() {
     if (mouse.click) {
       _context.lineWidth = 0.2;
@@ -93,3 +105,11 @@ function handlePlayer() {
   player.update();
   player.draw();
 }
+function Animate() {
+  _context.clearRect(0, 0, canvas_.width, canvas_.height);
+
+  handlePlayer();
+
+  requestAnimationFrame(Animate);
+}
+Animate();
