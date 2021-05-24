@@ -120,6 +120,12 @@ class Bubble {
     this.counted = false;
     this.sound = Math.random() <= 0.5 ? "sound1" : "sound2";
   }
+  update() {
+    this.y -= this.speed;
+    const dx = this.x - player.x;
+    const dy = this.y - player.y;
+    this.distance = Math.sqrt(dx * dx + dy * dy);
+  }
 }
 
 function Animate() {
