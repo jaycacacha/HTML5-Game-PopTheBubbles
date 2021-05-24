@@ -172,11 +172,19 @@ function handleBubbles() {
 const backgroundImg = new Image();
 backgroundImg.src = "assets/environment/background.png";
 
+const BG = {
+  x1: 0,
+  x2: canvas_.width,
+  y: 0,
+  width: canvas_.width,
+  height: canvas_.height,
+};
+
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
-
-  handlePlayer();
+  HandleBackground();
   handleBubbles();
+  handlePlayer();
   gameFrame++;
   requestAnimationFrame(Animate);
 }
