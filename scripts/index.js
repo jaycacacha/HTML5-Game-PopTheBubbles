@@ -126,6 +126,15 @@ class Bubble {
     const dy = this.y - player.y;
     this.distance = Math.sqrt(dx * dx + dy * dy);
   }
+  draw() {
+    _context.drawImage(
+      bubbleImg,
+      this.x - 65,
+      this.y - 65,
+      this.radius * 2.6,
+      this.radius * 2.6
+    );
+  }
 }
 
 function Animate() {
