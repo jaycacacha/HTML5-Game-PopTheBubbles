@@ -34,3 +34,17 @@ playerLookLeft.src = "assets/player/__yellow_cartoon_fish_01_swim.png";
 
 const playerLookRight = new Image();
 playerLookRight.src = "assets/player/__yellow_cartoon_fish_01_swim_flipped.png";
+
+//Create Player
+class Player {
+  constructor() {
+    this.x = canvas_.width;
+    this.y = canvas_.height / 2;
+    this.radius = 50;
+    this.angle = 20;
+    this.frameX = 0;
+    this.frameY = 0;
+    this.spriteWidth = 418;
+    this.spriteHeight = 397;
+  }
+}
