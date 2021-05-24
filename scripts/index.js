@@ -206,6 +206,14 @@ class Enemy {
     this.spriteHeight = 327;
     this.image = Math.random() <= 0.5 ? "enemy1" : "enemy2";
   }
+  update() {
+    this.x -= this.speed;
+    if (this.x < 0 - this.radius * 2) {
+      this.x = canvas_.width + 200;
+      this.y = Math.random() * (canvas_.height - 150) + 90;
+      this.speed = Math.random() * 2 + 2;
+    }
+  }
 }
 
 function Animate() {
