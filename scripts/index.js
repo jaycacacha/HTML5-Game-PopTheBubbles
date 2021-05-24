@@ -188,6 +188,11 @@ function HandleBackground() {
   _context.drawImage(backgroundImg, BG.x2, BG.y, BG.width, BG.height);
 }
 
+const enemy1 = new Image();
+enemy1.src = "assets/environment/__cartoon_fish_06_green_swim.png";
+const enemy2 = new Image();
+enemy2.src = "assets/environment/__cartoon_fish_06_red_swim.png";
+
 class Enemy {
   constructor() {
     this.x = canvas_.width + 150;
