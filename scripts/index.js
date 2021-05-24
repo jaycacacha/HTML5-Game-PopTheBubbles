@@ -305,3 +305,12 @@ Animate();
 window.addEventListener("resize", function () {
   canvasPosition = canvas_.getBoundingClientRect();
 });
+
+document.onkeydown = function (event) {
+  if (event.keyCode === 32) {
+    //spacebar
+    if (gameOver) {
+      location.reload();
+    }
+  }
+};
