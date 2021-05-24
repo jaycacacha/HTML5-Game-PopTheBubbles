@@ -47,4 +47,49 @@ class Player {
     this.spriteWidth = 418;
     this.spriteHeight = 397;
   }
+  draw() {
+    if (mouse.click) {
+      _context.lineWidth = 0.2;
+      _context.beginPath();
+      _context.moveTo(this.x, this.y);
+      _context.lineTo(mouse.x, mouse.y);
+      _context.stroke();
+    }
+
+    _context.save();
+    _context.translate(this.x, this.y);
+    _context.rotate(this.angle);
+
+    if (this.x >= mouse.x) {
+      _context.drawImage(
+        playerLookLeft,
+        this.frameX * this.spriteWidth,
+        this.frameY * this.spriteHeight,
+        this.spriteWidth,
+        this.spriteHeight,
+        0 - 50,
+        0 - 55,
+        this.spriteWidth / 4,
+        this.spriteHeight / 4
+      );
+    } else {
+      _context.drawImage(
+        playerLookRight,
+        this.frameX * this.spriteWidth,
+        this.frameY * this.spriteHeight,
+        this.spriteWidth,
+        this.spriteHeight,
+        0 - 50,
+        0 - 55,
+        this.spriteWidth / 4,
+        this.spriteHeight / 4
+      );
+    }
+    _context.restore();
+  }
+}
+const player = new Player();
+function handlePlayer() {
+  player.update();
+  player.draw();
 }
