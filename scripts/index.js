@@ -136,6 +136,10 @@ class Bubble {
     );
   }
 }
+const bubblePop1 = document.createElement("audio");
+bubblePop1.src = "sounds/pop1.wav";
+const bubblePop2 = document.createElement("audio");
+bubblePop2.src = "sounds/pop2.mp3";
 
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
