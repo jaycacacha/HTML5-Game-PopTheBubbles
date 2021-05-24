@@ -156,6 +156,11 @@ function handleBubbles() {
       bubblesArray[i].radius + player.radius
     ) {
       if (!bubblesArray[i].counted) {
+        if (bubblesArray[i].sound == "sound1") {
+          bubblePop1.play();
+        } else {
+          bubblePop2.play();
+        }
         score += 1;
         bubblesArray[i].counted = true;
         bubblesArray.splice(i, 1);
