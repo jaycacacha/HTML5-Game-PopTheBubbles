@@ -179,6 +179,14 @@ const BG = {
   width: canvas_.width,
   height: canvas_.height,
 };
+function HandleBackground() {
+  BG.x1 -= gameSpeed;
+  if (BG.x1 < -BG.width) BG.x1 = BG.width;
+  BG.x2 -= gameSpeed;
+  if (BG.x2 < -BG.width) BG.x2 = BG.width;
+  _context.drawImage(backgroundImg, BG.x1, BG.y, BG.width, BG.height);
+  _context.drawImage(backgroundImg, BG.x2, BG.y, BG.width, BG.height);
+}
 
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
