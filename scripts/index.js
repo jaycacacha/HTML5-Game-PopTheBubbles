@@ -141,11 +141,22 @@ bubblePop1.src = "sounds/pop1.wav";
 const bubblePop2 = document.createElement("audio");
 bubblePop2.src = "sounds/pop2.mp3";
 
+function handleBubbles() {
+  if (gameFrame % 50 === 0) {
+    bubblesArray.push(new Bubble());
+  }
+  for (let i = 0; i < bubblesArray.length; i++) {
+    bubblesArray[i].update();
+    bubblesArray[i].draw();
+  }
+}
+
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
 
   handlePlayer();
-
+  handleBubbles();
+  gameFrame++;
   requestAnimationFrame(Animate);
 }
 Animate();
