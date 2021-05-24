@@ -10,3 +10,5 @@ _context.font = "50px Kavivanar";
 let gameSpeed = 1;
 let gameOver = false;
 let isPaused = false;
+
+let canvasPosition = canvas_.getBoundingClientRect();
