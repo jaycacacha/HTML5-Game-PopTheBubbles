@@ -282,7 +282,10 @@ function Animate() {
   _context.fillStyle = "black";
   _context.fillText("Score: " + score, 10, 40);
   gameFrame++;
-  requestAnimationFrame(Animate);
+
+  if (!gameOver) {
+    requestAnimationFrame(Animate);
+  }
 }
 Animate();
 
