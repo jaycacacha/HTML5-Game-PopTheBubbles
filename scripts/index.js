@@ -105,6 +105,11 @@ function handlePlayer() {
   player.update();
   player.draw();
 }
+
+const bubblesArray = [];
+const bubbleImg = new Image();
+bubbleImg.src = "assets/environment/bubble_pop_frame_01.png";
+
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
 
