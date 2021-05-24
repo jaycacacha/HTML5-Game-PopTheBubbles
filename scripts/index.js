@@ -110,6 +110,18 @@ const bubblesArray = [];
 const bubbleImg = new Image();
 bubbleImg.src = "assets/environment/bubble_pop_frame_01.png";
 
+class Bubble {
+  constructor() {
+    this.x = Math.random() * canvas_.width;
+    this.y = canvas_.height + 100;
+    this.radius = 50;
+    this.speed = Math.random() * 2 + 1.2;
+    this.distance;
+    this.counted = false;
+    this.sound = Math.random() <= 0.5 ? "sound1" : "sound2";
+  }
+}
+
 function Animate() {
   _context.clearRect(0, 0, canvas_.width, canvas_.height);
 
