@@ -31,3 +31,6 @@ canvas_.addEventListener("mouseup", function (event) {
 
 const playerLookLeft = new Image();
 playerLookLeft.src = "assets/player/__yellow_cartoon_fish_01_swim.png";
+
+const playerLookRight = new Image();
+playerLookRight.src = "assets/player/__yellow_cartoon_fish_01_swim_flipped.png";
