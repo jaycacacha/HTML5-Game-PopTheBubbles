@@ -18,3 +18,9 @@ const mouse = {
   y: canvas_.height / 2,
   click: false,
 };
+
+canvas_.addEventListener("mousedown", function (event) {
+  mouse.click = true;
+  mouse.x = event.x - canvasPosition.left;
+  mouse.y = event.y - canvasPosition.top;
+});
